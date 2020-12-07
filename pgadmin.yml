@@ -1,10 +1,12 @@
 version: "3.5"
+networks:
+  wikijs-pgadmin:
 
 services:
   pgadmin:
     networks:
-      - EXAMPLE_SERVICE-pgadmin
+      - wikijs-pgadmin
 
-  EXAMPLE_SERVICE:
+  wikijs:
     networks:
-      - EXAMPLE_SERVICE-pgadmin
+      - wikijs-pgadmin

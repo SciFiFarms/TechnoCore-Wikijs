@@ -1,0 +1,71 @@
+---
+title: $(WIKI_TITLE)
+host: $(HOST)
+port: $(WIKI_PORT)
+paths:
+  repo: ./repo
+  data: ./data
+uploads:
+  maxImageFileSize: 3
+  maxOtherFileSize: 100
+lang: en
+langRtl: false
+public: true
+auth:
+  defaultReadAccess: true
+  local:
+    enabled: true
+#port: 3000
+bindIP: 0.0.0.0
+db:
+  type: $(DB_TYPE)
+  host: '$(DB_HOST)'
+  port: $(DB_PORT)
+  user: '$(DB_USER)'
+  pass: '$(DB_PASS)'
+  db: $(DB_NAME)
+  storage: $(DB_FILEPATH)
+  ssl: $(DB_SSL)
+ssl:
+  enabled: $(SSL_ACTIVE)
+  port: 3443
+  provider: letsencrypt
+  domain: $(LETSENCRYPT_DOMAIN)
+  subscriberEmail: $(LETSENCRYPT_EMAIL)
+logLevel: info
+ha: $(HA_ACTIVE)
+
+#sessionSecret: lekkerbydiesee817fuej38vlenc843hsabdje84jdkdnfjfu
+#git:
+#  url: https://github.com/Organization/Repo
+#  branch: master
+#  auth:
+#    # Type: basic or ssh
+#    type: ssh
+#    # Only for Basic authentication:
+#    username: marty
+#    password: MartyMcFly88
+#    # Only for SSH authentication:
+#    privateKey: /etc/wiki/keys/git.pem
+#    sslVerify: true
+#  # Default email to use as commit author
+#  serverEmail: marty@example.com
+#  # Whether to use user email as author in commits
+#  showUserEmail: true
+features:
+  linebreaks: true
+  mathjax: true
+externalLogging:
+  bugsnag: false
+  loggly: false
+  papertrail: false
+  rollbar: false
+  sentry: false
+theme:
+  primary: indigo
+  alt: blue-grey
+  viewSource: all # all | write | false
+  footer: blue-grey
+  code:
+    dark: true
+    colorize: true
